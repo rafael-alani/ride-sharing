@@ -1,0 +1,27 @@
+.header{
+    font-family: "Alexandria", serif;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+    display: -webkit-box;
+    border-bottom-width:0;
+    border-bottom-style: solid ;
+    border-bottom: black;
+    background-color: orange;
+    position:relative;
+    z-index:2002;
+    height:64px;
+    box-sizing:border-box;
+    padding: 12px 0;
+    top:0;}
+.home{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: calc(1408px);
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
