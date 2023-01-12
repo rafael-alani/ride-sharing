@@ -510,21 +510,86 @@ body{
     display: flex;
     flex-direction: row;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-left: 20px;
+
 
 }
+/*.options a{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    font-family: 'Source Sans Pro', sans-serif;*/
+/*    font-size: 20px;*/
+/*    justify-content: flex-start;*/
+/*    margin-top: 10px;*/
+
+/*}*/
 .selector a{
     /*border-style: solid;*/
-    margin-top: 17px;
+    margin-top: 20px;
     z-index: 1;
     transition: color 0.3s linear;
+    font-weight: bold;
+    font-style:normal;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.68);
-    margin-left: 5px ;
-    margin-right: 5px;
+    margin-left: 10px ;
+    margin-right: 10px;
+
+    /*margin-top: 10px;*/
 }
 .selector a:hover{
     /*transition: 0.5s  ;*/
     color: white;
 }
 
+.selector span {
+    position: relative;
+    display: inline-list-item;
+    cursor: pointer;
+    padding-top: -10px;
+
+}
+.options1{
+    margin-top: -15px;
+    display: flex;
+    align-items: flex-end;
+    /*margin-top: ;*/
+}
+.selector img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.selector span:before, .selector span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 100%;
+    margin-top: -0.5px;
+    background: #fff;
+}
+
+.selector span:before {
+    left: -2.5px;
+}
+.selector span:after {
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.selector span:hover:before {
+    background: #fff;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.selector span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
