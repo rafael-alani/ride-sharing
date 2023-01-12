@@ -1,0 +1,28 @@
+.search-ride  {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    background:url(/CSS/images/search-section-background.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: 80%;
+   width: 100%;
+   height: 700px;
+
+}
+
+.section-container {
+    display:  flex;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+#form-div label {
+    display: none;
+}
