@@ -110,9 +110,8 @@ header{
 }
 
 /*!Login Page!*/
-
 .login_page{
-    display: block;
+    display: flex;
     border-radius: 4px;
     /*box-shadow: inset 0 0 15px 4px rgba(0,0,0,.06),0 0 15px 4px rgba(0,0,0,.06);*/
     left: 50%;
@@ -122,7 +121,11 @@ header{
     top: 50%;
     transform: translate(-50%,-50%);
     width: 500px;
+    z-index: 1;
 }
+
+
+
 .login_a{
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #ffffff;
@@ -341,3 +344,187 @@ body{
     margin-bottom: 2%;
     margin-left: 30%;
 }
+.driver_header{
+    display: flex;
+    height: 400px;
+    background-image: url("images/back3.png");
+    background-repeat: no-repeat;
+    /*background-size:cover;*/
+    background-size:cover;
+    background-position-y: -100px ;
+    align-items: center;
+    z-index: -1;
+    margin-bottom: -50px;
+}
+.driver_header_input{
+    /*margin-left:20% ;*/
+    /*align-items: flex-end;*/
+    /*flex-direction: column;*/
+
+
+}
+.driver_header form{
+    display: flex;
+}
+.trips_header{
+    background-color: #0f3556;
+    position: relative;
+    display: flex;
+    width: 70%;
+    margin:auto;
+    box-sizing: border-box;
+    /*justify-content: center;*/
+    /*border: 1px solid;*/
+    /*border-color: ;*/
+    flex-direction: column;
+}
+.selector{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #0a253b;
+    position: relative;
+    margin: auto;
+
+}
+.driver_header_input input{
+    padding: 10% 20%;
+}
+
+@media (max-width: 1210px){
+    .driver_header{
+        background-size: 1210px;
+    }
+}
+.trips_body{
+    margin-left: 5% ;
+    margin-top: 3%;
+    margin-bottom:3% ;
+    /*background-color: white;*/
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    border-radius: 10px;
+}
+.trips_body2{
+    margin-left: 5% ;
+    margin-top: 3%;
+    margin-bottom:3% ;
+    /*background-color: white;*/
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    border-radius: 10px;
+}
+.start{
+    background-color: white;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-right:20px ;
+    border-radius: 4px;
+    /*border: 1px solid #5b1111;*/
+    /*border-radius: 7px;*/
+    border: none;
+}
+.stars{
+    background-color: #0f3556;
+}
+.stars img{
+    /*opacity: 0;*/
+}
+.start2{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    margin-right: -1px;
+}
+.start input{
+    font-family: "Source Sans Pro" ,sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: 80%;
+    border-style: none;
+    border-radius: 10px;
+}
+.start img{
+    margin-top: 17px;
+    margin-right: 10px ;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+}
+.finish{
+    padding-left: -10%;
+    margin-left: -4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.finish img{
+    margin-right: 12px;
+}
+.trips_body hr{
+    border-style: solid;
+    margin-top: 17px;
+    margin-left: -3%;
+    height: 25px;
+    background-color: white;
+    z-index: 1;
+}
+.date{
+    margin-left: 0px;
+    width: 60%;
+}
+.date img{
+    margin-top: 21px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.trips_body button{
+    font-family: 'Source Sans Pro', sans-serif;
+    /*box-sizing: border-box;*/
+    /*width: %;*/
+    padding: 10px 34px;
+    background-color: #de3450;
+    color: #0d2c44;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: -13%;
+    transition: transform 0.3s ease;
+
+}
+
+.trips_body button:hover{
+    transform: scale(110%);
+}
+.search{
+    margin-top: 5px;
+    height: 32px;
+    width: 32px;
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+
+}
+.selector a{
+    /*border-style: solid;*/
+    margin-top: 17px;
+    z-index: 1;
+    transition: color 0.3s linear;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.68);
+    margin-left: 5px ;
+    margin-right: 5px;
+}
+.selector a:hover{
+    /*transition: 0.5s  ;*/
+    color: white;
+}
+
