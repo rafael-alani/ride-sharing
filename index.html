@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>demo</title>
 	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="CSS/search-form.css">
+	<link rel="stylesheet" href="CSS/search-section.css">
 </head>
 <body>
 	<div class="nav_bar">
@@ -28,6 +30,31 @@
 	<div class="hr_1">
 		<hr>
 	</div>
-	<button>test</button>
+	<section class="search-ride">
+		<div class="section-container">
+			<div class="form-container">
+				<div id="form-main">
+					<div id="form-div">
+					  <h1>Search a ride</h1>
+					  <form class="form">
+						
+            <label for="starting-location">Starting location</label>
+						<input name="starting-location" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Enter starting location" id="starting-location" />
+
+						<label for="destination">Destination</label>
+						<input name="destination" type="text" class="validate[required,custom[email]] feedback-input" id="destinatinon" placeholder="Enter destination" />
+						
+						
+						<div class="submit">
+						  <input type="submit" value="Request a ride" id="button-secondary"/>
+						  <div class="ease"></div>
+						</div>
+					  </form>
+					</div>
+			</div>
+			
+
+		</div>
+	</section>
 </body>
 </html>
