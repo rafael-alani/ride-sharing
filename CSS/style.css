@@ -132,6 +132,9 @@ header{
     z-index: 1;
     
 }
+.sign_in_b{
+    width: 600px;
+}
 
 @media (max-height: 670px) {
     .login_a{
@@ -152,7 +155,9 @@ header{
     width: 100%;
     padding: 15px;
 }
-
+/*.login_page h1{*/
+/*    text-align: center;*/
+/*}*/
 .login_a{
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #ffffff;
@@ -293,10 +298,14 @@ body{
 .top_form{
     display: flex;
     box-sizing: border-box;
+    justify-content: space-between;
     width: 100%;
 }
+.top_form input, .top_form select{
+    width: 245px;
+}
 .fname{
-    margin-right: 33%;
+    margin-right: 35%;
     padding: initial;
     color:#000000 ;
 }
