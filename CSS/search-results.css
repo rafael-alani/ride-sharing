@@ -150,6 +150,7 @@ background: linear-gradient(180deg, rgba(13,44,68,1) 0%, rgba(79,134,176,1) 40%,
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin-top: 1px;
 }
 
 .request-button:hover {
