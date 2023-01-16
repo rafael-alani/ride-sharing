@@ -2,7 +2,7 @@
     display:  flex;
     justify-content: center;
     align-items: center;
-    background:url(/CSS/images/search-section-background.jpg) no-repeat;
+    background:url(CSS/images/search-section-background.jpg) no-repeat;
     background-size: cover;
     background-position-y: 80%;
    width: 100%;
