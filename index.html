@@ -35,16 +35,15 @@
 	<section class="search-ride">
 		<div class="section-container">
 			<div class="form-container">
-				<div id="form-main">
-					<div id="form-div">
+					<div class="form-div">
 					  <h1>Search a ride</h1>
 					  <form action="availible_trips.html" class="form">
 						
-            <label for="starting-location">Starting location</label>
-						<input name="starting-location" value="Delft, Netherlands" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Enter starting location" id="starting-location" />
+            <label class="no-display" for="starting-location">Starting location</label>
+						<input name="starting-location" value="" type="text" class="feedback-input" placeholder="Enter starting location"/>
 
-						<label for="destination">Destination</label>
-						<input name="destination" value="Eindhoven, Netherlands"  type="text" class="validate[required,custom[email]] feedback-input" id="destinatinon" placeholder="Enter destination" />
+						<label class="no-display" for="destination">Destination</label>
+						<input name="destination" value=""  type="text" class="feedback-input" placeholder="Enter destination" />
 						
 						
 						<div class="submit">
@@ -53,7 +52,6 @@
 						</div>
 					  </form>
 					</div>
-			</div>
 		</div>
 
     <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJn8N5VRvZxkcRmLlkgWTSmvM&destination=place_id:ChIJ_VhfUcO1xUcRPdRLxaNcsIk&key=AIzaSyBK6odt1YwlUaTPMiBWwKp0Ihb1SN_NZ_Y"></iframe> 
@@ -72,24 +70,26 @@
     <div class="centering-wrapper">
       <div class="section-container">
         <div class="card">
-          <figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="background"/><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="profile"/>
+          <figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="background"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="profile"/>
             <figcaption>
               <h3>Rafael Alani<span>Computer Science Student</span></h3>
-              <div class="icons"><a href="https://github.com/rafael-alani">
+              <div class="icons"><a target="_blank" href="https://github.com/rafael-alani">
                 <img class="icon" src="/CSS/SVG/github.svg" alt="github icon" >
-              </a><a href="#"><img class="icon" src="/CSS/SVG/mail.svg" alt="mail icon"> </a>
-              <a href="#"> <img class="icon" src="/CSS/SVG/linkedin.svg" alt="linkedin icon"></a></div>
+              </a><a target="_blank" ><img class="icon" src="/CSS/SVG/mail.svg" alt="mail icon"> </a>
+              <a target="_blank" > <img class="icon" src="/CSS/SVG/linkedin.svg" alt="linkedin icon"></a></div>
             </figcaption>
+		</figure>
         </div>
         <div class="card">
-          <figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="background"/><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="profile"/>
+          <figure class="avatar"><img src="/CSS/images/nice_picture_1x1.jpg" alt="profile-sample1" class="background"/><img src="CSS/images/nice_picture_1x1.jpg" alt="profile-sample1" class="profile"/>
             <figcaption>
               <h3>Rafael Alani<span>Computer Science Student</span></h3>
-              <div class="icons"><a href="https://github.com/rafael-alani">
+              <div class="icons"><a target="_blank" href="https://github.com/rafael-alani">
                 <img class="icon" src="/CSS/SVG/github.svg" alt="github icon" >
-              </a><a href="#"><img class="icon" src="/CSS/SVG/mail.svg" alt="mail icon"> </a>
-              <a href="#"> <img class="icon" src="/CSS/SVG/linkedin.svg" alt="linkedin icon"></a></div>
+              </a><a target="_blank" href="mailto:rafael.alani@hotmail.com"><img class="icon" src="/CSS/SVG/mail.svg" alt="mail icon"> </a>
+              <a target="_blank" href="https://www.linkedin.com/in/rafael-andrei-alani-67197924b/"> <img class="icon" src="/CSS/SVG/linkedin.svg" alt="linkedin icon"></a></div>
             </figcaption>
+			</figure>
         </div>
       </div>
     </div>

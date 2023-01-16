@@ -4,6 +4,7 @@
     --primary: #0a253b;
     --primary-lighter: #0e558fc5;
     --secondary: #de3450;
+    --border: #cfdae3;
 }
 
 *{
@@ -555,7 +556,6 @@ body{
     cursor: pointer;
     margin-right: -13%;
     transition: transform 0.3s ease;
-
 }
 
 .trips_body button:hover{

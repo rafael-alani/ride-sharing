@@ -1,7 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 .avatar {
-  font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -16,9 +13,7 @@
   
 }
 .avatar * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .avatar .background {
@@ -27,6 +22,11 @@
   opacity: 0.2;
   filter: grayscale(100%) blur(10px);
   transition: all 2s ease;
+}
+
+.background {
+  width: 80%;
+  height: auto;
 }
 .avatar figcaption {
   width: 100%;
@@ -44,7 +44,6 @@
   opacity: 1;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.5);
-  -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
 }
 .avatar h3 {
@@ -70,12 +69,10 @@
 }
 .avatar i:hover {
   opacity: 1;
-  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .avatar:hover .background,
 .avatar.hover .background {
-  -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 
