@@ -61,11 +61,14 @@ input:focus, textarea:focus {
 	transition: all 0.3s;
   margin-top:-4px;
   font-weight:700;
+	border-radius: 5px ;
 }
 
 #button-secondary:hover, button-secondary:focus{
 	background-color: rgba(0,0,0,0);
 	color: var(--primary);
+	border: var(--primary) solid 4px;
+	border-radius: 5px;
 }
 	
 .submit:hover {
@@ -74,9 +77,10 @@ input:focus, textarea:focus {
 	
 .ease {
 	width: 0px;
-	height: 2.8rem;
+	height: 2.55rem;
 	background-color: #fbfbfb;
 	transition: .3s ease;
+	z-index: -1;
 }
 
 .submit:hover .ease{
