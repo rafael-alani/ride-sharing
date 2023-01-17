@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,600&display=swap');
 
 :root {
-    --primary: rgba(10, 37, 59, 0.64);
+    --primary: rgb(10, 37, 59);
     --primary-lighter: #0e558fc5;
     --secondary: #de3450;
     --border: #cfdae3;
