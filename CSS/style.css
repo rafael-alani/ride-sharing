@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,600&display=swap');
 
 :root {
-    --primary: rgb(10, 37, 59);
+    --primary: rgb(13, 44, 68);
     --primary-lighter: #0e558fc5;
     --secondary: #de3450;
     --border: #cfdae3;
@@ -456,6 +456,15 @@ body{
     .driver_header{
         background-size: 1210px;
     }
+}
+
+.input_mandatory:focus{
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid rgba(222, 52, 80, 0.62);
+    color: #0a253b;
+    outline: none;
+    /*padding: 13px 13px 13px 54px;*/
 }
 .trips_body{
     margin-left: 5% ;
