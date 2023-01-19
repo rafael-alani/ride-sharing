@@ -10,29 +10,57 @@
   <link rel="stylesheet" href="CSS/developer-section.css">
   <link rel="stylesheet" href="CSS/commitment-section.css">
 	<link rel="shortcut icon" href="CSS/images/logo.png">
+	<script src="login.js"></script>
 </head>
+
 <body>
+
 	<div class="nav_bar">
 		<header>
 			<a class="logo" href="#"><img class="logo" src="CSS/images/Untitled-1.png" alt="logo"></a>
 			<nav class="nav">
 					<ul class="nav_list">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">The Team</a></li>
+						<li><a href="#commitments">About Us</a></li>
+						<li><a href="#developers">The Team</a></li>
 						<li><a href="#">Drive With Us</a></li>
 					</ul>
 			</nav>
+<!--			<div class="nav_buttons">-->
+<!--				<a href="sign_up/sign_up.html" target="_self">Sign up</a>-->
+<!--			</div >-->
 			<div class="nav_buttons">
-				<a href="sign_up/sign_up.html" target="_self">Sign up</a>
-			</div >
-			<div class="nav_buttons">
-				<a href="login.html" target="_self">Log in    </a>
+				<a onclick="document.getElementById('login_page').style.display = 'block'" target="_self">Log in    </a>
 			</div>
 			</header>
 	</div>
 	<div class="hr_1">
 		<hr>
 	</div>
+	<div class="biglogin stop-scrolling" id="login_page" >
+		<div class="login_page abc" >
+			<div class="login_a">
+				<div class="">
+					<h1>Log in</h1>
+				</div>
+				<form action="index.html" autocomplete="on" method="post">
+					<div class="form">
+						<div class="sign_in">
+							<label>Email</label>
+							<span>Need an account?   <a href="sign_up.html"> Join Us</a></span>
+						</div>
+						<input type="email" placeholder="Email" name="email" id="email">
+						<div class="pass">
+							<label>Password</label>
+						</div>
+						<input type="password" placeholder="Password" name="password" id="password">
+					</div>
+					<button class="login_button">Log in</button>
+					<a href="#" class="forgor"> Forgot your password?</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<section class="search-ride">
 		<div class="section-container">
 			<div class="form-container">
@@ -57,7 +85,7 @@
     <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJn8N5VRvZxkcRmLlkgWTSmvM&destination=place_id:ChIJ_VhfUcO1xUcRPdRLxaNcsIk&key=AIzaSyBK6odt1YwlUaTPMiBWwKp0Ihb1SN_NZ_Y"></iframe> 
     </div>
 	</section>
-  <section class="commitments">
+  <section class="commitments" id="commitments">
     
       <img src="CSS/images/stock-driving.jpg" alt="pov of passanger in a ride">
       <div class="description">
@@ -66,7 +94,7 @@
       </div>
 
   </section>
-  <section class="developers">
+  <section class="developers" id="developers">
     <div class="centering-wrapper">
       <div class="section-container">
         <div class="card">
@@ -94,5 +122,10 @@
       </div>
     </div>
   </section>
+	<div class="footer">
+		<footer>
+			<p>©2023 MoveOn. All rights reserved. <a href="">Cookie Policy</a>, <a href="terms&conditions.html">Privacy and Terms</a>.</p>
+		</footer>
+	</div>
 </body>
 </html>
