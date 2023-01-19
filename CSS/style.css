@@ -264,6 +264,7 @@ header{
 
 .login_button:hover{
     transform: scale(110%);
+    background-color: #de3450;
 }
 .bd label{
     margin-right: -10px;
