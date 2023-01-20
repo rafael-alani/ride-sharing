@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="CSS/commitment-section.css">
 	<link rel="shortcut icon" href="CSS/images/logo.png">
 	<script src="login.js"></script>
+	<script src="https://kit.fontawesome.com/35628828d0.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="body_main">
@@ -53,6 +55,10 @@
 							<label>Password</label>
 						</div>
 						<input type="password"  placeholder="Password" name="password" id="password" required>
+						<div onclick="passIcon('eye1','slash-eye1','password')" class="iconss" id="eyeDiv1" style="display: flex">
+							<i  class="fa-solid fa-eye eye" id="eye1"></i>
+							<i class="fa-solid fa-eye-slash eye" id="slash-eye1"></i>
+						</div>
 					</div>
 					<input type="submit"  class="login_button" value="Log in">
 					<a href="#" class="forgor"> Forgot your password?</a>

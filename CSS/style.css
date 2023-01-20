@@ -708,7 +708,58 @@ header{
     transition: 0s;
 }
 .fa-eye{
-    margin-left: 90%;
-    z-index: 1;
-    margin-top: -50%;
+    margin-top: -54px;
+    cursor: pointer;
+    z-index: -1;
 }
+.iconss{
+    margin-left: 90%;
+
+}
+.fa-eye-slash{
+    margin-left: -18.834px;
+    margin-top: -54px;
+    cursor: pointer;
+    display: none;
+
+  }
+.eye{
+    margin-top: -74px;
+}
+.validations{
+    margin-left: 90%;
+    margin-bottom:-30px ;
+}
+.tick{
+    margin-top: -66px;
+    margin-bottom: 66px;
+    z-index: -1;
+}
+.ex{
+    margin-top: -63px;
+    margin-bottom: 63px;
+    margin-left: -34px;
+    z-index: -1;
+}
+.error{
+    top: -10px;
+    position: relative;
+    font-size: 14px;
+}
+.error_M{
+    display: flex;
+    flex-direction: row;
+}
+.error_M p{
+    width: 60%;
+}
+.helper{
+    margin-right: 18px;
+}
+.help{
+    margin-right: -7px;
+}
+.v2{
+    margin-left: 39%
+}
+
