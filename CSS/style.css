@@ -707,3 +707,8 @@ header{
     width: 100%;
     transition: 0s;
 }
+.fa-eye{
+    margin-left: 90%;
+    z-index: 1;
+    margin-top: -50%;
+}
