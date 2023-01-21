@@ -5,11 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MoveOn</title>
 	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/statistics.css">
 	<link rel="shortcut icon" href="../CSS/images/logo.png">
 	<script src="https://kit.fontawesome.com/35628828d0.js" crossorigin="anonymous"></script>
 
 </head>
 <body class="body" id="body">
+	<div id="hiddenDiv"></div>
 	<div class="nav_bar">
 		<header>
 			<a class="logo" href="../index.html"><img class="logo" src="../CSS/images/Untitled-1.png" alt="logo"></a>
@@ -504,7 +506,7 @@
 				<span class="forgor_b forgor_pp">By creating an account, you agree to our <a href="../terms&conditions.html">Privacy Policy</a></span>
 <!--				<input onclick="submit()" type="submit" class="login_button" value="Submit">-->
 				</form>
-			<button  onclick="submit(this)" class="login_button">Sign up</button>
+			<button id="jsFormSubmit" onclick="submit(this)" class="login_button">Sign up</button>
 			<span class="forgor_b">Already have an account? <a href="../login.html">Log in</a></span>
 
 		</div>
@@ -515,6 +517,7 @@
 			<p >©2023 MoveOn. All rights reserved. <a href="">Cookie Policy</a>, <a href="terms&conditions.html">Privacy and Terms</a>.</p>
 		</footer>
 	</div>
+	<script src="../statistics.js"></script>
 	<script src="../login.js"></script>
 	<script id="password_req_s"></script>
 	<script>helper()</script>
