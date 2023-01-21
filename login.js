@@ -206,6 +206,7 @@ function submit(e){
 
     // document.getElementById('password_req_s').innerText = 'myPasswordConfirmation(passwordConf)';
     passwordConf.oninput = function () {myPasswordConfirmation(passwordConf)};
+    helper()
 
 }
 function signIn(){
@@ -220,6 +221,7 @@ function signIn(){
     var i = myPassword(password)      //Password
     var k = myPasswordConfirmation(passwordConf);//Password Confirmation
     console.log(a,b,c,d,e,f,g,h,i,k);
+    helper();
     return a&&b&&c&&d&&e&&f&&g&&h&&i&&k;
 }
 
@@ -368,7 +370,7 @@ function helper(){
     var login = document.getElementById('login');
     var h = login.offsetHeight;
     console.log(h)
-    if(h>1500){
+    if(h>1750){
         body.style.minHeight='2000px'
     }
 }
