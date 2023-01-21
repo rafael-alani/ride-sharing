@@ -16,6 +16,9 @@ html{
     margin: 0;
     padding: 0;
 }
+.nav_bar{
+    position: sticky;
+}
 .nav_bar li,.nav_bar a,.nav_bar button{
     background-color: #0a253b;
     font-family: 'Pooppins', sans-serif;

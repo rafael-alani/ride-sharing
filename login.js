@@ -78,10 +78,17 @@ function mySelectors(e,m){
     return true;
 
 }
-function myName(e,m,y,j){
+
+// function nameCheck(e,error,tick,ex){
+//     console.log(e.value);
+//     return true
+// }
+
+function nameCheck(e,m,y,j){
+    // var vValue = document.getElementById('fName').value;
     var tick = j;
     var ex = y;
-    console.log(ex);
+    // console.log(vValue);
     // console.log(e);
 
     var value = e.value;
@@ -189,8 +196,8 @@ function submit(e){
     username.oninput = function () {myUsername(username)};
     email.oninput = function () {myEmail(email)};
     zipCode.oninput = function () {myZipCode(zipCode)};
-    document.getElementById('fName').oninput = function () {myName(name, document.getElementById('error_messageN'),document.getElementById('mark_F'),document.getElementById('check_F'))};
-    document.getElementById('lName').oninput = function () {myName(surname, document.getElementById('error_messageS'),document.getElementById('check_S'),document.getElementById('mark_S'))};
+    document.getElementById('fName').oninput = function () {nameCheck(document.getElementById('fName'), document.getElementById('error_messageN'),document.getElementById('mark_F'),document.getElementById('check_F'))};
+    document.getElementById('lName').oninput = function () {nameCheck(surname, document.getElementById('error_messageS'),document.getElementById('mark_S'),document.getElementById('check_S'))};
     gender.oninput = function () {mySelectors(gender,document.getElementById('error_messageSex'))};
     nationality.oninput = function () {mySelectors(nationality,document.getElementById('error_messageNat'))};
     language.oninput = function () {mySelectors(language,document.getElementById('error_messageL'))};
@@ -205,8 +212,8 @@ function signIn(){
    var a =  myUsername(username) //Username
     var b = myEmail(email)         //Email
     var c = myZipCode(zipCode)      //ZipCode
-    var d = myName(document.getElementById('fName'), document.getElementById('error_messageN'),document.getElementById('mark_F'),document.getElementById('check_F')) ;       //Name
-    var e = myName(document.getElementById('lName'), document.getElementById('error_messageS'),document.getElementById('mark_S'),document.getElementById('check_S'))    ;     //Surname
+    var d = nameCheck(document.getElementById('fName'), document.getElementById('error_messageN'),document.getElementById('mark_F'),document.getElementById('check_F')) ;       //Name
+    var e = nameCheck(document.getElementById('lName'), document.getElementById('error_messageS'),document.getElementById('mark_S'),document.getElementById('check_S'))    ;     //Surname
     var f = mySelectors(gender,document.getElementById('error_messageSex'))     //Sex
     var g = mySelectors(nationality,document.getElementById('error_messageNat'))    //Nationality
     var h = mySelectors(language,document.getElementById('error_messageL'))    //Language
@@ -218,6 +225,7 @@ function signIn(){
 
 function myEmail(e){
     var value = e.value;
+    console.log(document.getElementById('fName').value)
     console.log(e);
     var tick = document.getElementById('check_E');
     var ex = document.getElementById('mark_E');
