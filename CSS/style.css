@@ -764,4 +764,7 @@ header{
 .v2{
     margin-left: 39%
 }
+.test{
+    display: flex;
+}
 
