@@ -505,7 +505,6 @@ header{
 
 .input_mandatory:focus{
     background: #fff;
-    box-shadow: 0;
     border: 3px solid rgba(222, 52, 80, 0.62);
     color: #0a253b;
     outline: none;
