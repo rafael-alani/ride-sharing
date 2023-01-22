@@ -6,8 +6,7 @@
 	<title>MoveOn</title>
 	<link rel="stylesheet" href="../CSS/style.css">
 	<link rel="shortcut icon" href="../CSS/images/logo.png">
-
-<link rel="stylesheet" href="../CSS/statistics.css">
+	<link rel="stylesheet" href="../CSS/statistics.css">
 </head>
 <body class="body">
 	<div id="hiddenDiv"></div>
@@ -20,24 +19,23 @@
 	<!--	<div class="hr_1">-->
 	<!--		<hr>-->
 	<!--	</div>-->
-	
 	<section>
 	<div class="login_page sign_in_b">
 		<div class="login_a sign_in_a">
 			<div class="">
 				<h1>Sign up</h1>
 			</div>
-			<form onsubmit="event.preventDefault();" autocomplete="on" method="post">
+			<form autocomplete="on" method="post" onsubmit="event.preventDefault();">
 				<div class="form form_b">
 					<div class="sign_in emaiLabel">
 						<label>Username*</label>
 					</div>
-					<input type="text" class = "top_form  input_mandatory"  placeholder="Username" name="email" id="username" required minlength="5" maxlength="12" title="The Username must be between 5 and 12 characters">
+					<input type="text" class = "top_form  input_mandatory"  placeholder="Username" name="email" id="username" pattern="[A-Z]([-!$%^&*()_	+|~=`{}\[\]:;'?,.\/]|\d|\w){3,10}([-!$%^&*()_	+|~=`{}\[\]:;'?,.\/]|\d)" title="The Username must be between 5 and 12 characters, start with a capital letter and end with a number or special character">
 
 					<div class="sign_in emaiLabel">
 						<label>Email*</label>
 					</div>
-					<input type="email" class = "top_form  input_mandatory" placeholder="Email" name="email" id="email" required>
+					<input type="email" class = "top_form  input_mandatory" placeholder="Email" name="email" id="email" required pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*" title="It must have the @, only letters and the . sign are allowed">
 					<div class="sign_in red">
 						<label>First Name*</label>
 						<div class="sign_in fname red">
@@ -46,9 +44,9 @@
 					</div>
 					<div class = "top_form">
 
-						<input type="text" placeholder="First Name"  class = "top_form input_mandatory" name="email" id="FName" required>
+						<input type="text" placeholder="First Name"  class = "top_form input_mandatory" name="email" id="FName" required pattern="[A-Za-z]+" title="Only letters are allowed">
 
-						<input type="text" placeholder="Surname" class = "top_form input_mandatory" name="email" id="LName" required>
+						<input type="text" placeholder="Surname" class = "top_form input_mandatory" name="email" id="LName" required pattern="[A-Za-z]+" itle="Only letters are allowed">
 
 					</div>
 					<div class="sign_in red">
@@ -271,7 +269,7 @@
 							<option value="zambian">Zambian</option>
 							<option value="zimbabwean">Zimbabwean</option>
 						</select>
-						<input  type="text" placeholder="Last Name" name="email" minlength="6" maxlength="6" id="Zip-Code">
+						<input  type="text" placeholder="Last Name" name="email" pattern="\d{4}[A-Za-z]{2}" id="Zip-Code" title="Dutch Zip code expected: 4 letters followed by 2 numbers">
 					</div>
 					<div class="pass spass red">
 						<label>Language*</label>
@@ -428,11 +426,11 @@
 					<div class="pass spass red">
 						<label>Password*</label>
 					</div>
-					<input type="password" class = "top_form input_mandatory" placeholder="Password" name="password" id="password" required>
+					<input type="password" class = "top_form input_mandatory" placeholder="Password" name="password" id="password" required pattern="([-!$%^&*()_	+|~=`{}\[\]:;'?,.\/]|\d|\w){12,}" title="The password has a minimum length of 12, while 14 or more is recommended, a combination of letters, simbols, and numbers">
 					<div class="pass spass red">
 						<label>Repeat Password*</label>
 					</div>
-					<input type="password" placeholder="Password" class = "top_form input_mandatory" name="password" id="rep_password"required>
+					<input type="password" placeholder="Password" class = "top_form input_mandatory" name="password" id="rep_password"required pattern="([-!$%^&*()_	+|~=`{}\[\]:;'?,.\/]|\d|\w){12,}" title="The password has a minimum length of 12, while 14 or more is recommended, a combination of letters, simbols, and numbers">
 					<div class="pass spass">
 <!--						<form class="options_driver" >-->
 							<div class="sign_in red ">
@@ -455,7 +453,7 @@
 
 				</div>
 				<span class="forgor_b forgor_pp">By creating an account, you agree to our <a href="../terms&conditions.html">Privacy Policy</a></span>
-				<input id="jsFormSubmit" type="submit" class="login_button" value="Sign up">
+				<input id="jsFormSubmit" type="submit"  class="login_button" value="Sign up">
 <!--				<button type="submit" class="login_button">Sign up</button>-->
 
 				<span class="forgor_b">Already have an account? <a href="../login.html">Log in</a></span>
@@ -469,5 +467,5 @@
 		</footer>
 	</div>
 </body>
-	<script src="../statistics.js"></script>
+<script src="../statistics.js"></script>
 </html>

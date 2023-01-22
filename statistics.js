@@ -20,6 +20,7 @@ const statistics = [
 ];
 
 const createSubmitDiv = () => {
+  console.log("penis");
   hiddenDiv.innerHTML = "";
   let statisticsResults = [];
 
@@ -42,7 +43,7 @@ const createSubmitDiv = () => {
 
 const start = new Date();
 
-const body = document.querySelector("body");
+const body = document.querySelector(".body");
 body.addEventListener("click", trackClicks);
 
 // We have to  add the id of jsFormSubmit to all of the different sign up pages
