@@ -19,12 +19,14 @@ function myBirthdate(e){
     var error = document.getElementById('error_messageB');
     if (e.value ==''){
         error.innerHTML = 'Please insert a valid date.';
+        error.style.color = 'rgba(222, 52, 80, 0.62)';
         red(e);
         return false;
     }
 
     else{
         error.innerHTML = 'Looks Good!';
+        error.style.color = 'rgba(46,188,64,0.62)';
         green(e);
         return true;
     }
@@ -213,7 +215,7 @@ function submit(e){
     var addressV = document.getElementById('ad').value;
     var bioV = document.getElementById('about').value;
 
-    var alertMessage = "Hello " + nameV + ", down below you is you're sign in information:\n" +
+    var alertMessage = "Hello " + nameV + ", down below is you're sign in information:\n" +
         "Username: " + usernameV + "\n" +
         "Email: " + emailV + "\n" +
         "Name: " + nameV + " " +surnameV + "\n" +
