@@ -15,6 +15,20 @@ onclick = function (event){
     }
 }
 var allow = true;
+function myBirthdate(e){
+    var error = document.getElementById('error_messageB');
+    if (e.value ==''){
+        error.innerHTML = 'Please insert a valid date.';
+        red(e);
+        return false;
+    }
+
+    else{
+        error.innerHTML = 'Looks Good!';
+        green(e);
+        return true;
+    }
+}
 function myUsername(e){
     var tick = document.getElementById('check_U');
     var ex = document.getElementById('mark_U');
@@ -131,8 +145,8 @@ function myZipCode(e){
         error.style.color = 'rgba(222, 52, 80, 0.62)';
         tick.style.zIndex = '-1';
         ex.style.zIndex = '1';
-        red(e);
-        return false;
+        yellow(e);
+        return true;
     }
     if (!numbers.includes(v.charAt(0))){
         tick.style.zIndex = '-1';
@@ -185,10 +199,37 @@ function required(e){
 
 
 function submit(e){
+    var usernameV = document.getElementById('username').value;
+    var emailV = document.getElementById('email').value;
+    var zipCodeV = document.getElementById('zipCode').value;
+    var nameV = document.getElementById('fName').value;
+    var surnameV = document.getElementById('lName').value;
+    var genderV = document.getElementById('gender').value;
+    var nationalityV = document.getElementById('nationality').value;
+    var languageV = document.getElementById('languages').value;
+    var passwordV = document.getElementById('password').value;
+   // var passwordConfV = document.getElementById('rep_password').value;
+    var bDateV = document.getElementById('Birthdate').value
+    var addressV = document.getElementById('ad').value;
+    var bioV = document.getElementById('about').value;
+
+    var alertMessage = "Hello " + nameV + ", down below you is you're sign in information:\n" +
+        "Username: " + usernameV + "\n" +
+        "Email: " + emailV + "\n" +
+        "Name: " + nameV + " " +surnameV + "\n" +
+        "Birthdate: " + bDateV + "\n" +
+        "Gender: " + genderV + "\n" +
+        "Nationality: " + nationalityV + "\n" +
+        "Language: " + languageV + "\n" +
+        "Address: " + addressV + "\n" +
+        "ZipCode: " + zipCodeV + "\n" +
+        "Bio: " + bioV + "\n";
+
     // var e = document.getElementById('sign_in_form')
     if (signIn()===true){
-            window.location.assign("../index.html");
-            console.log('help')
+        window.alert(alertMessage);
+        window.location.assign("../index.html");
+        console.log('help')
         }
     else{
         window.scrollTo(100,100);
@@ -202,6 +243,7 @@ function submit(e){
     nationality.oninput = function () {mySelectors(nationality,document.getElementById('error_messageNat'))};
     language.oninput = function () {mySelectors(language,document.getElementById('error_messageL'))};
     password.oninput = function () {myPassword(password)};
+    document.getElementById('Birthdate').oninput = function (){myBirthdate( document.getElementById('Birthdate') )};
     // password.oninput = function () {myPasswordConfirmation(passwordConf)};
 
     // document.getElementById('password_req_s').innerText = 'myPasswordConfirmation(passwordConf)';
@@ -220,9 +262,10 @@ function signIn(){
     var h = mySelectors(language,document.getElementById('error_messageL'))    //Language
     var i = myPassword(password)      //Password
     var k = myPasswordConfirmation(passwordConf);//Password Confirmation
-    console.log(a,b,c,d,e,f,g,h,i,k);
+    var j = myBirthdate(document.getElementById('Birthdate'));
+    console.log(a,b,c,d,e,f,g,h,i,k,j);
     helper();
-    return a&&b&&c&&d&&e&&f&&g&&h&&i&&k;
+    return a&&b&&c&&d&&e&&f&&g&&h&&i&&k&&j;
 }
 
 function myEmail(e){
