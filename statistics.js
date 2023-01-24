@@ -1,11 +1,13 @@
+//click counting function
 clicks = 0;
 const trackClicks = () => {
   clicks++;
   console.log(clicks);
 };
 
-// [0] - characters
-// [1] - keystrokes
+// A map that keeps track of the characthers and keystrokes for all the input fields on the page
+// [0] - keystrokes
+// [1] - characters
 const inputFields = new Map();
 document.onkeydown = (e) => {
   if (e.target.nodeName !== "INPUT") return;
@@ -15,6 +17,7 @@ document.onkeydown = (e) => {
   //initialize
   if (typeof inputFields.get(name) == "undefined")
     inputFields.set(name, [0, 0]);
+
   //if character or keystroke
   const previousResult = inputFields.get(name);
   if (e.key === "Backspace")
@@ -23,6 +26,7 @@ document.onkeydown = (e) => {
     inputFields.set(name, [previousResult[0] + 1, previousResult[1] + 1]);
 };
 
+//general statistics for the whole page
 const statistics = [
   "Number of mouse clicks: ",
   "Total time spent(seconds): ",
@@ -30,6 +34,7 @@ const statistics = [
   "Total number of characters typed: ",
 ];
 
+//this is the function that is executed every time the submit button is pressed
 const createSubmitDiv = () => {
   hiddenDiv.innerHTML = "";
   let statisticsResults = [];
@@ -49,6 +54,7 @@ const createSubmitDiv = () => {
   statisticsResults.push(String(keypress));
   statisticsResults.push(String(characters));
 
+  //add all the general statistics
   for (let i = 0; i < statisticsResults.length; i++) {
     const span = document.createElement("span");
     span.className = "statisticSpan";
@@ -56,6 +62,7 @@ const createSubmitDiv = () => {
     hiddenDiv.appendChild(span);
   }
 
+  //all add the statistics for the input field
   inputFields.forEach((value, key) => {
     const span = document.createElement("span");
     span.className = "statisticSpan";
