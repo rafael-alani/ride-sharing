@@ -281,7 +281,7 @@ function myEmail(e){
     if(value.includes('@')){
         var split = value.split('@');
         console.log(split);
-        if (!split[0].includes('.') && split[0].length>0 && split[1].includes('.')){
+        if (split[0].length>0 && split[1].includes('.')){
             var split2 = split[1].split('.');
             console.log(split2);
             var l = split2.length-1;
