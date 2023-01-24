@@ -62,7 +62,7 @@ function myUsername(e){
             ex.style.zIndex = '1';
         }
     }
-  } else {
+  else {
     error.innerHTML = "The Username must be between 5 and 12 characters.";
     error.style.color = "rgba(222, 52, 80, 0.62)";
     red(e);
@@ -286,7 +286,8 @@ function submit(e){
     // var e = document.getElementById('sign_in_form')
     if (signIn()===true){
         window.alert(alertMessage);
-        window.location.assign("../index.html");
+        window.scrollTo(100,100);
+        // window.location.assign("../index.html");
         console.log('help')
         }
     else{
@@ -369,7 +370,7 @@ function myEmail(e){
 
         }
     }
-  } else {
+   else {
     red(e);
     error.innerHTML = "Please insert a valid e-mail!";
     error.style.color = "rgba(222, 52, 80, 0.62)";
