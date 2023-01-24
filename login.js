@@ -1,19 +1,19 @@
-var username = document.getElementById('username');
-var email = document.getElementById('email');
-var zipCode = document.getElementById('zipCode');
-var name = document.getElementById('fName');
-var surname = document.getElementById('lName');
-var gender = document.getElementById('gender');
-var nationality = document.getElementById('nationality');
-var language = document.getElementById('languages');
-var password = document.getElementById('password');
-var passwordConf = document.getElementById('rep_password');
+var username = document.getElementById("username");
+var email = document.getElementById("email");
+var zipCode = document.getElementById("zipCode");
+var name = document.getElementById("fName");
+var surname = document.getElementById("lName");
+var gender = document.getElementById("gender");
+var nationality = document.getElementById("nationality");
+var language = document.getElementById("languages");
+var password = document.getElementById("password");
+var passwordConf = document.getElementById("rep_password");
 
-onclick = function (event){
-    if(event.target === document.getElementById('login_page')){
-        document.getElementById('login_page').style.display = 'none';
-    }
-}
+onclick = function (event) {
+  if (event.target === document.getElementById("login_page")) {
+    document.getElementById("login_page").style.display = "none";
+  }
+};
 var allow = true;
 function myBirthdate(e){
     var error = document.getElementById('error_messageB');
@@ -62,37 +62,90 @@ function myUsername(e){
             ex.style.zIndex = '1';
         }
     }
-    else{
-        error.innerHTML = 'The Username must be between 5 and 12 characters.';
-        error.style.color = 'rgba(222, 52, 80, 0.62)';
-        red(e);
-        tick.style.zIndex = '-1';
-        ex.style.zIndex = '1';
-    }
+  } else {
+    error.innerHTML = "The Username must be between 5 and 12 characters.";
+    error.style.color = "rgba(222, 52, 80, 0.62)";
+    red(e);
+    tick.style.zIndex = "-1";
+    ex.style.zIndex = "1";
+  }
 
-    return false;
+  return false;
 }
-const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-const lowerAlph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-const upperCaseAlp = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const lowerAlph = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+const upperCaseAlp = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 // var numbers = "1234567890";
 // var allNumbers = numbers.split('');
-function specialChar(c){
-    return !lowerAlph.includes(c) && !upperCaseAlp.includes(c);
+function specialChar(c) {
+  return !lowerAlph.includes(c) && !upperCaseAlp.includes(c);
 }
 
-function mySelectors(e,m){
-    if (e.value === ""){
-        red(e);
-        m.innerHTML = 'Please select one';
-        m.style.color = 'rgba(222, 52, 80, 0.62)';
-        return false;
-    }
-    green(e);
-    m.innerHTML = 'Looks Good!';
-    m.style.color = 'rgba(46,188,64,0.62)';
-    return true;
-
+function mySelectors(e, m) {
+  if (e.value === "") {
+    red(e);
+    m.innerHTML = "Please select one";
+    m.style.color = "rgba(222, 52, 80, 0.62)";
+    return false;
+  }
+  green(e);
+  m.innerHTML = "Looks Good!";
+  m.style.color = "rgba(46,188,64,0.62)";
+  return true;
 }
 
 // function nameCheck(e,error,tick,ex){
@@ -100,40 +153,43 @@ function mySelectors(e,m){
 //     return true
 // }
 
-function nameCheck(e,m,y,j){
-    // var vValue = document.getElementById('fName').value;
-    var tick = j;
-    var ex = y;
-    // console.log(vValue);
-    // console.log(e);
+function nameCheck(e, m, y, j) {
+  // var vValue = document.getElementById('fName').value;
+  var tick = j;
+  var ex = y;
+  // console.log(vValue);
+  // console.log(e);
 
-    var value = e.value;
-    console.log(value)
-    // console.log(value);
-    if (value===""){
-        red(e);
-        tick.style.zIndex = '-1';
-        ex.style.zIndex = '1';
-        m.innerHTML = 'The Name must contain at least one character';
-        m.style.color = 'rgba(222, 52, 80, 0.62)';
-        return false;
+  var value = e.value;
+  console.log(value);
+  // console.log(value);
+  if (value === "") {
+    red(e);
+    tick.style.zIndex = "-1";
+    ex.style.zIndex = "1";
+    m.innerHTML = "The Name must contain at least one character";
+    m.style.color = "rgba(222, 52, 80, 0.62)";
+    return false;
+  }
+  for (let i = 0; i < value.length; i++) {
+    if (
+      !lowerAlph.includes(value.charAt(i)) &&
+      !upperCaseAlp.includes(value.charAt(i))
+    ) {
+      red(e);
+      tick.style.zIndex = "-1";
+      ex.style.zIndex = "1";
+      m.innerHTML = "The Name must only include letters";
+      m.style.color = "rgba(222, 52, 80, 0.62)";
+      return false;
     }
-    for (let i = 0; i<value.length;i++){
-        if (!lowerAlph.includes(value.charAt(i)) && !upperCaseAlp.includes(value.charAt(i))){
-            red(e);
-            tick.style.zIndex = '-1';
-            ex.style.zIndex = '1';
-            m.innerHTML = 'The Name must only include letters';
-            m.style.color = 'rgba(222, 52, 80, 0.62)';
-            return false;
-        }
-    }
-    green(e);
-    m.innerHTML = 'Looks Good!';
-    tick.style.zIndex = '1';
-    ex.style.zIndex = '-1';
-    m.style.color = 'rgba(46,188,64,0.62)';
-    return true;
+  }
+  green(e);
+  m.innerHTML = "Looks Good!";
+  tick.style.zIndex = "1";
+  ex.style.zIndex = "-1";
+  m.style.color = "rgba(46,188,64,0.62)";
+  return true;
 }
 
 function myZipCode(e){
@@ -194,8 +250,8 @@ function myZipCode(e){
     return true;
 }
 
-function required(e){
-    return e.value !== "";
+function required(e) {
+  return e.value !== "";
 }
 
 
@@ -248,10 +304,11 @@ function submit(e){
     document.getElementById('Birthdate').oninput = function (){myBirthdate( document.getElementById('Birthdate') )};
     // password.oninput = function () {myPasswordConfirmation(passwordConf)};
 
-    // document.getElementById('password_req_s').innerText = 'myPasswordConfirmation(passwordConf)';
-    passwordConf.oninput = function () {myPasswordConfirmation(passwordConf)};
-    helper()
-
+  // document.getElementById('password_req_s').innerText = 'myPasswordConfirmation(passwordConf)';
+  passwordConf.oninput = function () {
+    myPasswordConfirmation(passwordConf);
+  };
+  helper();
 }
 function signIn(){
    var a =  myUsername(username) //Username
@@ -312,119 +369,108 @@ function myEmail(e){
 
         }
     }
-    else{
-        red(e);
-        error.innerHTML = 'Please insert a valid e-mail!';
-        error.style.color = 'rgba(222, 52, 80, 0.62)';
-        tick.style.zIndex = '-1';
-        ex.style.zIndex = '1';
-    }
-    return false;
+  } else {
+    red(e);
+    error.innerHTML = "Please insert a valid e-mail!";
+    error.style.color = "rgba(222, 52, 80, 0.62)";
+    tick.style.zIndex = "-1";
+    ex.style.zIndex = "1";
+  }
+  return false;
 }
 
-function myPassword(e){
-    var error = document.getElementById('error_messageP');
-    var pass = document.getElementById('password').value;
-    console.log(pass)
-    var upper = 0;
-    var lower = 0;
-    var special = 0;
-    var number = 0;
-    for(let i = 0; i < pass.length;i++){
-        if (numbers.includes(pass.charAt(i))){
-            number++;
-        }
-        else if (upperCaseAlp.includes(pass.charAt(i))){
-            upper++;
-        }
-        else if (lowerAlph.includes(pass.charAt(i))){
-            lower++;
-        }
-        else special++;
+function myPassword(e) {
+  var error = document.getElementById("error_messageP");
+  var pass = document.getElementById("password").value;
+  console.log(pass);
+  var upper = 0;
+  var lower = 0;
+  var special = 0;
+  var number = 0;
+  for (let i = 0; i < pass.length; i++) {
+    if (numbers.includes(pass.charAt(i))) {
+      number++;
+    } else if (upperCaseAlp.includes(pass.charAt(i))) {
+      upper++;
+    } else if (lowerAlph.includes(pass.charAt(i))) {
+      lower++;
+    } else special++;
+  }
+  console.log();
+  if (number > 0 && lower > 0 && special > 0 && upper > 0) {
+    if (pass.length > 11) {
+      if (pass.length > 13) {
+        error.innerHTML = "Looks Good!";
+        error.style.color = "rgba(46,188,64,0.62)";
+        green(e);
+        return true;
+      } else {
+        error.innerHTML = "At least 14 character would be safer.";
+        error.style.color = "rgba(222,174,52,0.62)";
+        yellow(e);
+        return true;
+      }
+    } else {
+      error.innerHTML = "The password must have at least 12 characters.";
+      error.style.color = "rgba(222, 52, 80, 0.62)";
+      red(e);
+      return false;
     }
-    console.log()
-    if (number>0&&lower>0&&special>0&&upper>0){
-        if (pass.length>11){
-            if(pass.length>13){
-                error.innerHTML = 'Looks Good!';
-                error.style.color = 'rgba(46,188,64,0.62)';
-                green(e);
-                return true;
-            }
-            else{
-                error.innerHTML = 'At least 14 character would be safer.';
-                error.style.color = 'rgba(222,174,52,0.62)';
-                yellow(e);
-                return true;
-
-            }
-
-
-        }
-        else{
-            error.innerHTML = 'The password must have at least 12 characters.';
-            error.style.color = 'rgba(222, 52, 80, 0.62)';
-            red(e);
-            return false;
-        }
-
-    }
-    error.innerHTML = 'The password must be a combination of uppercase, lowercase, numbers and special characters.';
-    error.style.color = 'rgba(222, 52, 80, 0.62)';
+  }
+  error.innerHTML =
+    "The password must be a combination of uppercase, lowercase, numbers and special characters.";
+  error.style.color = "rgba(222, 52, 80, 0.62)";
+  red(e);
+  return false;
+}
+function myPasswordConfirmation(e) {
+  var pass = document.getElementById("password").value;
+  var error = document.getElementById("error_messageRP");
+  if (e.value !== pass || e.value === "") {
+    error.innerHTML = "The passwords dont match.";
+    error.style.color = "rgba(222, 52, 80, 0.62)";
     red(e);
     return false;
-}
-function myPasswordConfirmation(e){
-    var pass = document.getElementById('password').value;
-    var error = document.getElementById('error_messageRP');
-    if (e.value!==pass || e.value ===''){
-        error.innerHTML = 'The passwords dont match.';
-        error.style.color = 'rgba(222, 52, 80, 0.62)';
-        red(e);
-        return false;
-    }
-    error.innerHTML = 'Looks Good!';
-    error.style.color = 'rgba(46,188,64,0.62)';
-    green(e);
-    return true;
+  }
+  error.innerHTML = "Looks Good!";
+  error.style.color = "rgba(46,188,64,0.62)";
+  green(e);
+  return true;
 }
 
-var display = true
-function passIcon(id,id2,pass){
-    var eye = document.getElementById(id);
-    var slash = document.getElementById(id2)
-    pass = document.getElementById(pass);
-    if (display === true){
-        slash.style.zIndex='-1';
-        display = false;
-        eye.style.zIndex = '1';
-        pass.type = 'text'
-    }
-    else{
-        display = true;
-        slash.style.zIndex='1';
-        eye.style.zIndex = '-1';
-        pass.type = 'password'
-
-    }
-
+var display = true;
+function passIcon(id, id2, pass) {
+  var eye = document.getElementById(id);
+  var slash = document.getElementById(id2);
+  pass = document.getElementById(pass);
+  if (display === true) {
+    slash.style.zIndex = "-1";
+    display = false;
+    eye.style.zIndex = "1";
+    pass.type = "text";
+  } else {
+    display = true;
+    slash.style.zIndex = "1";
+    eye.style.zIndex = "-1";
+    pass.type = "password";
+  }
 }
 
-function helper(){
-    var body = document.getElementById('body');
-    var login = document.getElementById('login');
-    var h = login.offsetHeight;
-    console.log(h)
-    if(h>1750){
-        body.style.minHeight='2000px'
-    }
+function helper() {
+  var body = document.getElementById("body");
+  var login = document.getElementById("login");
+  var h = login.offsetHeight;
+  console.log(h);
+  if (h > 1750) {
+    body.style.minHeight = "2000px";
+  }
 }
 function green(id) {
-    id.style.border = '3px solid rgba(52, 222, 75, 0.62)';
+  id.style.border = "3px solid rgba(52, 222, 75, 0.62)";
 }
-function red(id){
-    id.style.border = '3px solid rgba(222, 52, 80, 0.62)';
+function red(id) {
+  id.style.border = "3px solid rgba(222, 52, 80, 0.62)";
 }
-function yellow(id){
-    id.style.border = '3px solid rgba(222,174,52,0.62)';
+function yellow(id) {
+  id.style.border = "3px solid rgba(222,174,52,0.62)";
 }

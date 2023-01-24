@@ -1,6 +1,5 @@
 #hiddenDiv {
     position: fixed;
-    right: 5px;
     display: flex;
     flex-direction: column;
     z-index: 100;

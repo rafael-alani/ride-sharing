@@ -4,12 +4,23 @@ const trackClicks = () => {
   console.log(clicks);
 };
 
-let keypress = 0,
-  characters = 0;
+// [0] - characters
+// [1] - keystrokes
+const inputFields = new Map();
 document.onkeydown = (e) => {
-  keypress++;
+  if (e.target.nodeName !== "INPUT") return;
   console.log(e.key);
-  if (e.key.length == 1) characters++;
+
+  const name = e.target.placeholder;
+  //initialize
+  if (typeof inputFields.get(name) == "undefined")
+    inputFields.set(name, [0, 0]);
+  //if character or keystroke
+  const previousResult = inputFields.get(name);
+  if (e.key === "Backspace")
+    inputFields.set(name, [previousResult[0] - 1, previousResult[1] + 1]);
+  if (e.key.length === 1)
+    inputFields.set(name, [previousResult[0] + 1, previousResult[1] + 1]);
 };
 
 const statistics = [
@@ -20,7 +31,6 @@ const statistics = [
 ];
 
 const createSubmitDiv = () => {
-  console.log("penis");
   hiddenDiv.innerHTML = "";
   let statisticsResults = [];
 
@@ -30,6 +40,12 @@ const createSubmitDiv = () => {
   time = Math.floor(time / 1000); // conversion to seconds
   statisticsResults.push(String(time));
 
+  let keypress = 0,
+    characters = 0;
+  inputFields.forEach((value) => {
+    keypress += value[1];
+    characters += value[0];
+  });
   statisticsResults.push(String(keypress));
   statisticsResults.push(String(characters));
 
@@ -39,6 +55,20 @@ const createSubmitDiv = () => {
     span.innerText = statistics[i] + statisticsResults[i];
     hiddenDiv.appendChild(span);
   }
+
+  inputFields.forEach((value, key) => {
+    const span = document.createElement("span");
+    span.className = "statisticSpan";
+    span.innerText =
+      key +
+      " key presses: " +
+      value[1] +
+      "  |  " +
+      key +
+      " characters written: " +
+      value[0];
+    hiddenDiv.appendChild(span);
+  });
 };
 
 const start = new Date();
